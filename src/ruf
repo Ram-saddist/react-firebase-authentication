@@ -1,0 +1,19 @@
+<div>
+          <BrowserRouter>
+            <Header/>
+            <Routes>
+              <Route path="/" element={<Login/>}/>
+              <Route path="/home" element={<Home/>}/>
+              <Route path="*" element={<NotFound/>}/>
+            </Routes>
+          </BrowserRouter>
+          <div>
+            {
+                this.state.user?(<Home name={this.state.name}/>):
+                (<Login data={
+                  {user:this.handleUser}
+                }/>)
+            }
+            
+          </div>
+       </div>

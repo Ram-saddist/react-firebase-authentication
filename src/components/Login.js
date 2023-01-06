@@ -23,7 +23,6 @@ class Login extends React.Component{
 			}).catch((err)=>{
 				alert(err);
 			})
-			this.props.data.user(this.state.email)
 	}
 	signup=()=>{
 		createUserWithEmailAndPassword(auth,this.state.email,this.state.password)
